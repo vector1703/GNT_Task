@@ -46,6 +46,22 @@ function validateInputs(){
         success = false;
         setError(password,'Password must be atleast 8 characters long')
     }
+    else if(!/[A-Z]/.test(passwordVal)){
+        success = false;
+        setError(password,'Password must contain atleast one uppercase letter')
+    }
+    else if(!/[a-z]/.test(passwordVal)){
+        success = false;
+        setError(password,'Password must contain atleast one lowercase letter')
+    }
+    else if(!/[0-9]/.test(passwordVal)){
+        success = false;
+        setError(password,'Password must contain atleast one number')
+    }
+    else if(!/[^A-Za-z0-9]/.test(passwordVal)){
+        success = false;
+        setError(password,'Password must contain atleast one special character')
+    }
     else{
         setSuccess(password)
     }
