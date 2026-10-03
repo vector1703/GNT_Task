@@ -65,7 +65,6 @@ function validateInputs(){
     else{
         setSuccess(password)
     }
-
     if(cpasswordVal === ''){
         success = false;
         setError(cpassword,'Confirm password is required')
